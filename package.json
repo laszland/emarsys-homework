@@ -4,13 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": " semistandard && jest",
+    "test:watch": "semistandard && jest --watch"
   },
   "author": "Laszlo Roland Kiss",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "jest": "^27.0.4"
+  },
+  "dependencies": {
+    "semistandard": "^16.0.1"
+  },
+  "semistandard": {
+    "ignore": [
+      "*.test.js"
+    ]
   }
 }

@@ -5,7 +5,7 @@ const {
   isDateValid,
   isTurnAroundValid,
   countWeekendDays
-} = require('./service')
+} = require('./service');
 
 test('convert 1 hr equal to 3600000', () => {
   expect(convertHrToMs(1)).toEqual(3600000);
@@ -33,9 +33,9 @@ test('isTurnAroundValid returns true on positive integer, false in any other cas
   expect(isTurnAroundValid(1.2)).toBeFalsy();
   expect(isTurnAroundValid(0)).toBeFalsy();
   expect(isTurnAroundValid(3.0)).toBeTruthy();
-})
+});
 
 test('countWeekendDays returns a number of weekend days between two dates (starting date not included', () => {
   expect(countWeekendDays(new Date('2021-06-16'), new Date('2021-06-21'))).toEqual(2);
   expect(countWeekendDays(new Date('2021-06-19'), new Date('2021-06-20'))).toEqual(1);
-})
+});
